@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """task-102"""
-from typing import Tuple, List, SupportsIndex
+from typing import Tuple, List
 
 
 def zoom_array(lst: Tuple, factor: int = 2) -> List:
