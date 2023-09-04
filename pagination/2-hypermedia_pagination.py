@@ -44,15 +44,17 @@ class Server:
     def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict:
         """gets the values and returns a dict"""
         self.dataset()
-        
-        if self.__dataset[page - 1]:
-            prev_page = None
-        else:
+        total = len(self.__dataset[:])
+
+        if page - 1 > 0 and page - 1 < total:
             prev_page = page - 1
-        if self.__dataset[page + 1]:
-            next_page = None
         else:
+            prev_page = None
+        if page + 1 > 0 and page + 1 < total:
             next_page = page + 1
+        else:
+            next_page = None
+
         the_dict = {'page_size': page_size,
                     'page': page,
                     'data': self.__dataset[page:page + page_size],
@@ -60,4 +62,3 @@ class Server:
                     'prev_page': prev_page,
                     'total_pages': len(self.__dataset[:])}
         return the_dict
-
