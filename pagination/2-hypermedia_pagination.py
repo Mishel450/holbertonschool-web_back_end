@@ -44,6 +44,7 @@ class Server:
     def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict:
         """gets the values and returns a dict"""
         self.dataset()
+        
         if self.__dataset[page - 1]:
             prev_page = None
         else:
