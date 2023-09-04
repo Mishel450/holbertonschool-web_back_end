@@ -40,7 +40,7 @@ class Server:
         the_pages = index_range(page, page_size)
         self.dataset()
         return self.__dataset[the_pages[0]:the_pages[1]]
-    
+
     def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict:
         """gets the values and returns a dict"""
         self.dataset()
