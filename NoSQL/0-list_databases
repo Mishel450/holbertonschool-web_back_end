@@ -4,7 +4,10 @@ import pymongo
 
 
 client = pymongo.MongoClient("mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb")
-database_list = client.list_database_names()
+
+database_list = client.list_databases()
+
 for i in database_list:
     print(i)
+
 client.close()
