@@ -1,2 +1,2 @@
 //task-5
-db.school.find() | wc
+db.school.count()
