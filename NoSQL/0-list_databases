@@ -1,13 +1,2 @@
-#!/usr/bin/env python3
 //task-0
-import pymongo
-
-
-client = pymongo.MongoClient("mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb")
-
-database_list = client.list_databases()
-
-for i in database_list:
-    print(i)
-
-client.close()
+show dbs
