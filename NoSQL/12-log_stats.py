@@ -5,8 +5,7 @@ import pymongo
 
 if __name__ == "__main__":
     client = pymongo.MongoClient("mongodb://localhost:27017/")
-    the_db = client['logs']
-    mongo_collection = the_db['nginx']
+    mongo_collection = client.logs.nginx
     the_list = mongo_collection.find()
     method_GET = 0
     method_POST = 0
