@@ -9,3 +9,5 @@ function initializeRooms() {
 }
 
 initializeRooms();
+
+export default initializeRooms
