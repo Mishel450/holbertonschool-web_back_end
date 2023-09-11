@@ -5,7 +5,7 @@ function initializeRooms() {
   const clase2 = new ClassRoom(20);
   const clase3 = new ClassRoom(34);
   const arr = [clase1, clase2, clase3];
-  console.log(arr);
+  return arr;
 }
 
 initializeRooms();
