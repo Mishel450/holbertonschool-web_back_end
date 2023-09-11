@@ -10,4 +10,4 @@ function initializeRooms() {
 
 initializeRooms();
 
-export default initializeRooms
+export default initializeRooms;
