@@ -3,9 +3,11 @@ export default function cleanSet(set, startString = '') {
   let stringToReturn = '';
   if (startString !== '') {
     for (const i of set) {
-      const check = i.startsWith(startString);
-      if (check === true) {
-        stringToReturn += `${i.substring(length)}-`;
+      if (i !== undefined) {
+        const check = i.startsWith(startString);
+        if (check === true) {
+          stringToReturn += `${i.substring(length)}-`;
+        }
       }
     }
   }
