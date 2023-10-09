@@ -1,4 +1,4 @@
-export default function cleanSet(set, startString) {
+export default function cleanSet(set, startString = '') {
   const { length } = startString;
   let stringToReturn = '';
   if (startString !== '') {
