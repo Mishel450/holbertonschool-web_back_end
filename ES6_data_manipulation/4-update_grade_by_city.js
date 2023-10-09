@@ -3,14 +3,14 @@ export default function updateStudentGradeByCity(arrstudents, city, newGrades) {
   if (arrstudents instanceof Array) {
     arr = arrstudents.map((element) => {
       if (element.location === city) {
-        let grades = 'N/A';
+        let grade = 'N/A';
         newGrades.forEach((dict) => {
           if (element.id === dict.studentId) {
-            grades = dict.grade;
+            grade = dict.grade;
           }
         });
 
-        return { ...element, grades };
+        return { ...element, grade };
       }
 
       return null;
