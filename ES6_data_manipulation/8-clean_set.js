@@ -1,7 +1,7 @@
 export default function cleanSet(set, startString = '') {
   const { length } = startString;
   let stringToReturn = '';
-  if (startString instanceof String) {
+  if (typeof startString === 'string') {
     if (startString !== '') {
       for (const i of set) {
         if (i !== undefined) {
